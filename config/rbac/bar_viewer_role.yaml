@@ -1,0 +1,20 @@
+# permissions for end users to view bars.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: bar-viewer-role
+rules:
+- apiGroups:
+  - samplecontroller.my.domain
+  resources:
+  - bars
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - samplecontroller.my.domain
+  resources:
+  - bars/status
+  verbs:
+  - get

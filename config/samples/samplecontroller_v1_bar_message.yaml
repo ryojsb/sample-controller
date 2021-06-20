@@ -1,0 +1,7 @@
+apiVersion: samplecontroller.my.domain/v1
+kind: Bar
+metadata:
+  name: bar-sample-1
+spec:
+  # Add fields here
+  message: Bar

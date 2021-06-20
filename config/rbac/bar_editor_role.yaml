@@ -1,0 +1,24 @@
+# permissions for end users to edit bars.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: bar-editor-role
+rules:
+- apiGroups:
+  - samplecontroller.my.domain
+  resources:
+  - bars
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - samplecontroller.my.domain
+  resources:
+  - bars/status
+  verbs:
+  - get
